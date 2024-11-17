@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+<body class = "body1">
+    <!-- Navbar Section -->
+    <div class="navbar">
+        <div class="nav-left">Ankit Kumar</div>
+        <div class="nav-right">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="project.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://drive.google.com/file/d/1jSLSxriDXszYZWWVJDm6ndlBXT3_Rbxt/view?usp=sharing">Resume</a>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="about-col-1">
+                <img src="images/Ankit 1.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am Ankit Kumar. I live in Kanpur. I have completed my graduation (B.Sc) <br>
+                    from CSJMU Kanpur University with a science background. I like to play chess and cricket.
+                </p>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>MongoDB</li>
+                        <li>SQL</li>
+                        <li>HTML, CSS</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li>Fresher</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li>High School (UP Board, 2019)</li>
+                        <li>Intermediate (UP Board, 2021)</li>
+                        <li>Graduation (B.Sc) from CSJMU Kanpur (2024)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for switching tabs
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            // Deactivate all tabs and contents
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            // Activate the selected tab and corresponding content
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
